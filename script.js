@@ -22,7 +22,7 @@
  
     searchFoodItem("");
 
-const Output= (foodName,imgUrl ) => {
+const Output= (foodName,imgUrl) => {
 return `
 <div class="food-card">
 <div style="background-image:url(${imgUrl})" class="food-img"></div>
