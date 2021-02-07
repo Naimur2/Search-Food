@@ -13,7 +13,7 @@
         if(foodGenre==="") {row.innerHTML=noResults; }
         else{
             row.innerHTML=`<div class="lds-ring"><div></div><div></div></div>`;
-            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${foodGenre}`)
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?sch=${foodGenre}`)
             .then(res => res.json())
             .then(data => FoodFest(data.meals))
             .catch(err => row.innerHTML=noResults);
