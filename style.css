@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+.loader {
+  margin-top: 5%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid rgb(11, 12, 19);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+.lds-ring {
+  margin-top: 5%;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgb(12, 71, 15);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(85, 45, 45) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.678);
+  width: 270px;
+  border: 1px solid rgb(109, 105, 105);
+  border-radius: 10px;
+  height: 22.5rem;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+.food-card:hover {
+  border: 1px solid rgb(182, 170, 216);
+  box-shadow: 2px 2px 7px 4px rgba(89, 100, 104, 0.2);
+}
+.food-name {
+  height: 15%;
+  padding: 15px;
+  text-align: center;
+}
+.food-name span {
+  /* font-size: 1.2rem; */
+  font-weight: 700;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.food-img {
+  border-radius: 10px 10px 0 0;
+  background: url(images/burger.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 85%;
+}
+.search-top {
+  text-align: center;
+  margin-top: 2%;
+}
+.search-top h1 {
+  font-family: "Potta One", cursive;
+  margin: 2%;
+  display: inline-block;
+  font-size: 3rem;
+  color: rgb(83, 29, 29);
+}
+.search-bar {
+  width: 60vw;
+  display: flex;
+  padding: 0.5rem;
+  vertical-align: middle;
+  border-radius: 5px;
+  margin: 1rem auto 1rem auto;
+}
+
+.search {
+  display: inline-block;
+  padding: 0.6rem;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  background: rgba(253, 253, 253, 0.7);
+  border-radius: 5px 0px 0px 5px;
+  color: rgb(46, 82, 59);
+  border: 1px solid rgba(85, 71, 71, 0.5);
+}
+.search:active,
+.search:hover {
+  overflow: hidden;
+  color: rgb(31, 29, 29);
+  border: 1px solid rgb(173, 167, 167);
+  border-radius: 5px 0px 0px 5px;
+}
+.search:focus {
+  outline: none;
+  border: 1px solid rgb(87, 87, 100);
+  overflow: hidden;
+}
+.input {
+  display: inline-block;
+  width: 20%;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0px 5px 5px 0px;
+  color: white;
+  background: rgb(30, 58, 100);
+  border: 1px solid rgba(233, 228, 228, 0.5);
+  cursor: pointer;
+}
+.input:hover,
+.input:active {
+  background: rgb(74, 112, 168);
+  color: rgb(215, 219, 224);
+}
+.no-result {
+  padding: 30vh;
+  text-align: center;
+  font-size: 3.4em;
+}
+.background {
+  background: url(images/wood.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .input {
+    font-size: auto;
+  }
+  .search-bar {
+    width: 90vw;
+  }
+  .search-top h1 {
+    font-size: 2rem;
+  }
+}
