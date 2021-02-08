@@ -190,6 +190,9 @@
   border: 1px solid rgba(233, 228, 228, 0.5);
   cursor: pointer;
 }
+body {
+  height: 100%;
+}
 .input:hover,
 .input:active {
   background: rgb(74, 112, 168);
