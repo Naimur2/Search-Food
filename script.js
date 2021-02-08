@@ -33,7 +33,6 @@
         let id;
         let nameOfFood;
         foodName.forEach((obj)=> {
-
         let result = Object.keys(obj).map((key) => [key, obj[key]]);
         result.forEach(prop => {
              id = result[0][1];
